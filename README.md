@@ -4,30 +4,15 @@
 
 **W2-PM-FINAL \| CYBERSECURITY \| NETWORKWALKS**
 
-  -----------------------------------------------------------------------
-  Field                               Details
-  ----------------------------------- -----------------------------------
-  Pentester Name                      Ansari Rushan Aslam
-
-  Program/Batch                       B084-Networkwalks
-
-  Date                                10 November 2026
-
-  Modules completed                   W2-PM1 (Multiple Kali
-                                      Tools)W2-PM5 (Zenmap
-                                      Scanning)
-
-  Client/Target                       1. Networkwalks (secured written
-                                      permission already)
-                                      2.My own local LAN Network
-
-  Permission secured from client?     Yes
-
-  Phases covered                      Phase 1: Reconnaissance &
-                                      Footprinting
-                                      Phase 2:Scanning & NetworkDiscovery
-                                      Phase 3-5: In Progress
-  -----------------------------------------------------------------------
+| Field | Details |
+|---|---|
+| Pentester Name | Ansari Rushan Aslam |
+| Program/Batch | B084-Networkwalks |
+| Date | 10 November 2026 |
+| Modules Completed | W2-PM1 (Multiple Kali Tools), W2-PM5 (Zenmap Scanning) |
+| Client/Target | 1. Networkwalks (secured written permission already); 2. My own local LAN Network |
+| Permission Secured from Client? | Yes |
+| Phases Covered | Phase 1: Reconnaissance & Footprinting; Phase 2: Scanning & Network Discovery; Phase 3-5: In Progress |
 
 ------------------------------------------------------------------------
 
@@ -66,36 +51,17 @@ short note on why the finding matters from an attacker's point of view.
 
 The table below lists each tool used in this report and its purpose.
 
-  -----------------------------------------------------------------------
-  Tool                                Purpose
-  ----------------------------------- -----------------------------------
-  Kali Linux & Windows                Operating systems used for
-                                      reconnaissance activities
-
-  WHOIS                               Find domain registration details
-                                      (owner, dates, name servers).
-
-  whatweb                             Fingerprint web technologies
-                                      (server, CMS, plugins, IP).
-
-  nslookup                            Resolve the domain name to its IP
-                                      address using DNS.
-
-  curl -I                             Read the HTTP response headers of
-                                      the website.
-
-  wafw00f                             Detect whether a Web Application
-                                      Firewall protects the site.
-
-  dnsrecon                            Enumerate all DNS records (NS, MX,
-                                      SPF, TXT, SRV).
-
-  Zenmap (Nmap GUI)                   Scan the local subnet to find live
-                                      hosts, IPs and MAC addresses.
-
-  Windows CMD                         Local IP and MAC address
-                                      identification
-  -----------------------------------------------------------------------
+| Tool | Purpose |
+|---|---|
+| Kali Linux & Windows | Operating systems used for reconnaissance activities. |
+| WHOIS | Find domain registration details (owner, dates, name servers). |
+| WhatWeb | Fingerprint web technologies (server, CMS, plugins, IP). |
+| Nslookup | Resolve the domain name to its IP address using DNS. |
+| `curl -I` | Read the HTTP response headers of the website. |
+| Wafw00f | Detect whether a Web Application Firewall protects the site. |
+| DNSRecon | Enumerate all DNS records (NS, MX, SPF, TXT, SRV). |
+| Zenmap (Nmap GUI) | Scan the local subnet to find live hosts, IPs and MAC addresses. |
+| Windows CMD | Identify local IP and MAC addresses. |
 
 ------------------------------------------------------------------------
 
@@ -226,45 +192,14 @@ report.
 Based on the information collected during the footprinting and network
 scanning activities, I identified the following potential risks.
 
-  -------------------------------------------------------------------------------------
-  \#             Risk / Finding   Evidence /        Potential Impact     Risk Level
-                                  Observation                            
-  -------------- ---------------- ----------------- -------------------- --------------
-  1              Web technology   WhatWeb           Attackers may use    ● Medium
-                 information      identified        exposed              
-                 exposed          WordPress and WP  technology/version   
-                                  Download Manager  information to       
-                                                    identify software    
-                                                    requiring further    
-                                                    security review      
-
-  2              Server IP        Nslookup resolved Provides information ● Low
-                 address          the domain to     about the network    
-                 identifiable     192.232.216.135   location of the web  
-                                                    service              
-
-  3              HTTP technical   Curl returned     May assist           ● Low
-                 information      HTTP response     technology           
-                 exposed          headers and       fingerprinting and   
-                                  exposed /wp-json/ further enumeration  
-
-  4              WAF technology   Wafw00f           Reveals information  ● Low
-                 identifiable     identified        about the web        
-                                  ModSecurity       application's        
-                                  (SpiderLabs)      security             
-                                                    architecture         
-
-  5              DNS              DNSRecon          DNS information can  ● Medium
-                 infrastructure   identified DNS,   help build a broader 
-                 information      mail and          infrastructure       
-                 exposed          service-related   profile              
-                                  records                                
-
-  6              Multiple live    Zenmap identified Unknown or           ● Low
-                 hosts visible on two live hosts in unauthorized devices 
-                 local network    the example       may potentially be   
-                                  network           present on a network 
-  -------------------------------------------------------------------------------------
+| # | Risk / Finding | Evidence / Observation | Potential Impact | Risk Level |
+|---|---|---|---|---|
+| 1 | Web technology information exposed | WhatWeb identified WordPress and WP Download Manager. | Attackers may use exposed technology/version information to identify software requiring further security review. | ● Medium |
+| 2 | Server IP address identifiable | Nslookup resolved the domain to 192.232.216.135. | Provides information about the network location of the web service. | ● Low |
+| 3 | HTTP technical information exposed | Curl returned HTTP response headers and exposed /wp-json/. | May assist technology fingerprinting and further enumeration. | ● Low |
+| 4 | WAF technology identifiable | Wafw00f identified ModSecurity (SpiderLabs). | Reveals information about the web application's security architecture. | ● Low |
+| 5 | DNS infrastructure information exposed | DNSRecon identified DNS, mail and service-related records. | DNS information can help build a broader infrastructure profile. | ● Medium |
+| 6 | Multiple live hosts visible on local network | Zenmap identified two live hosts in the example network. | Unknown or unauthorized devices may potentially be present on a network. | ● Low |
 
 **Risk level key:** ● Critical　● Medium　● Low
 
@@ -287,41 +222,32 @@ confirm any actual vulnerability.
 Based on the observations from these activities, I recommend the
 following security improvements:
 
-1.  **Review publicly exposed technology information**\
-    Organizations should regularly review what information about their
-    web technologies, CMS and plugins is publicly visible.
+1. **Review publicly exposed technology information**  
+   Organizations should regularly review what information about their web technologies, CMS and plugins is publicly visible.
 
-2.  **Keep software updated**\
-    CMS platforms, plugins and other web technologies should be
-    regularly updated and reviewed against current security advisories.
+2. **Keep software updated**  
+   CMS platforms, plugins and other web technologies should be regularly updated and reviewed against current security advisories.
 
-3.  **Review HTTP headers**\
-    HTTP response headers should be reviewed to determine whether
-    unnecessary technical information is being exposed.
+3. **Review HTTP headers**  
+   HTTP response headers should be reviewed to determine whether unnecessary technical information is being exposed.
 
-4.  **Review DNS records regularly**\
-    DNS records should be checked periodically to ensure that only
-    required information and services are publicly exposed.
+4. **Review DNS records regularly**  
+   DNS records should be checked periodically to ensure that only required information and services are publicly exposed.
 
-5.  **Properly configure and monitor the WAF**\
-    Keep the WAF (ModSecurity) enabled and tuned, since it already
-    blocks naive attacks.
+5. **Properly configure and monitor the WAF**  
+   Keep the WAF (ModSecurity) enabled and tuned, since it already blocks naive attacks.
 
-6.  **Perform regular internal network discovery**\
-    Organizations should periodically scan their own networks to
-    identify active devices.
+6. **Perform regular internal network discovery**  
+   Organizations should periodically scan their own networks to identify active devices.
 
-7.  **Investigate unknown devices**\
-    Any unexpected device discovered during network scanning should be
-    investigated and verified.
+7. **Investigate unknown devices**  
+   Any unexpected device discovered during network scanning should be investigated and verified.
 
-8.  **Maintain network documentation**\
-    Network topology and device information should be documented and
-    updated regularly.
+8. **Maintain network documentation**  
+   Network topology and device information should be documented and updated regularly.
 
-9.  **Perform security testing with authorization**\
-    Reconnaissance and scanning should only be performed against systems
-    and networks where appropriate authorization has been provided.
+9. **Perform security testing with authorization**  
+   Reconnaissance and scanning should only be performed against systems and networks where appropriate authorization has been provided.
 
 ------------------------------------------------------------------------
 
@@ -424,7 +350,6 @@ LinkedIn: Rushan Ansari \| LinkedIn
 
 -   **Program Name:** Cybersecurity program at Networkwalks
 -   **Week:** 02
--   **Repository:** GitHub
 
 ------------------------------------------------------------------------
 
