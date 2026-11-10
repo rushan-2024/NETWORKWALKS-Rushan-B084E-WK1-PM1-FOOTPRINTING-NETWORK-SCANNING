@@ -7,28 +7,26 @@
   -----------------------------------------------------------------------
   Field                               Details
   ----------------------------------- -----------------------------------
-  Pentester Name                      Emmanuel John (Cybersecurity
-                                      Professional)
+  Pentester Name                      Ansari Rushan Aslam
 
   Program/Batch                       B084-Networkwalks
 
-  Date                                09 November 2026
+  Date                                10 November 2026
 
   Modules completed                   W2-PM1 (Multiple Kali
-                                      Tools)`<br>`{=html}W2-PM5 (Zenmap
+                                      Tools)W2-PM5 (Zenmap
                                       Scanning)
 
-  Client/Target                       1\. Networkwalks (secured written
-                                      permission already)`<br>`{=html}2.
-                                      My own local LAN Network
+  Client/Target                       1. Networkwalks (secured written
+                                      permission already)
+                                      2.My own local LAN Network
 
   Permission secured from client?     Yes
 
   Phases covered                      Phase 1: Reconnaissance &
-                                      Footprinting`<br>`{=html}Phase 2:
-                                      Scanning & Network
-                                      Discovery`<br>`{=html}Phase 3-5: In
-                                      Progress
+                                      Footprinting
+                                      Phase 2:Scanning & NetworkDiscovery
+                                      Phase 3-5: In Progress
   -----------------------------------------------------------------------
 
 ------------------------------------------------------------------------
