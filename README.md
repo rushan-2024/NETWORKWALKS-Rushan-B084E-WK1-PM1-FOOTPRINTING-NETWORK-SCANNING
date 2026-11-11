@@ -80,10 +80,7 @@ information about the domain registration and hosting infrastructure.
 
 **Screenshot -- WHOIS**
 
-> ```{=html}
-> <!-- Add screenshot here -->
-> ```
-> ![WHOIS Screenshot](screenshots/whois.png)
+> ![WHOIS Screenshot](whois.png)
 
 I then used WhatWeb to identify technologies used by the website. The
 results identified WordPress 7.0.4 and WP Download Manager 3.3.58, along
@@ -91,20 +88,14 @@ with other information exposed by the website.
 
 **Screenshot -- WhatWeb**
 
-> ```{=html}
-> <!-- Add screenshot here -->
-> ```
-> ![WhatWeb Screenshot](screenshots/whatweb.png)
+> ![WhatWeb Screenshot](whatweb.png)
 
 Using Nslookup, I resolved the domain name to its IP address. The
 provided result identified 192.232.216.135.
 
 **Screenshot -- Nslookup**
 
-> ```{=html}
-> <!-- Add screenshot here -->
-> ```
-> ![Nslookup Screenshot](screenshots/nslookup.png)
+> ![Nslookup Screenshot](nslookup.png)
 
 I used Curl with the -I option to inspect the HTTP response headers.
 This provided additional information about the web application and
@@ -112,20 +103,14 @@ exposed the WordPress REST API endpoint /wp-json/.
 
 **Screenshot -- Curl HTTP Headers**
 
-> ```{=html}
-> <!-- Add screenshot here -->
-> ```
-> ![Curl Screenshot](screenshots/curl-headers.png)
+> ![Curl Screenshot](curl.png)
 
 Next, I used Wafw00f to determine whether a Web Application Firewall was
 protecting the website. The result identified ModSecurity (SpiderLabs).
 
 **Screenshot -- Wafw00f**
 
-> ```{=html}
-> <!-- Add screenshot here -->
-> ```
-> ![Wafw00f Screenshot](screenshots/wafw00f.png)
+> ![Wafw00f Screenshot](wafw00f.png)
 
 Finally, I used DNSRecon to enumerate DNS records. The results provided
 information relating to name servers, mail servers, SPF/TXT records,
@@ -133,10 +118,7 @@ service records and DNS software information.
 
 **Screenshot -- DNSRecon**
 
-> ```{=html}
-> <!-- Add screenshot here -->
-> ```
-> ![DNSRecon Screenshot](screenshots/dnsrecon.png)
+> ![DNSRecon Screenshot](dnsrecon.png)
 
 ### 4.2 Network Scanning with Zenmap
 
@@ -160,25 +142,12 @@ After completing the scan, I opened the Topology section in Zenmap,
 enabled the legend and saved the network topology in PDF format as
 required by the practical task.
 
-**Screenshot -- Windows ipconfig**
-
-> ```{=html}
-> <!-- Add screenshot here -->
-> ```
-> ![ipconfig Screenshot](screenshots/ipconfig.png)
-
 **Screenshot -- Zenmap Ping Scan**
 
-> ```{=html}
-> <!-- Add screenshot here -->
-> ```
-> ![Zenmap Ping Scan Screenshot](screenshots/zenmap-ping-scan.png)
+> ![Zenmap Ping Scan Screenshot](zenmap_7.png)
 
 **Screenshot -- Zenmap Topology**
 
-> ```{=html}
-> <!-- Add screenshot here -->
-> ```
 > ![Zenmap Topology Screenshot](screenshots/zenmap-topology.png)
 
 **Note:** The actual subnet, number of hosts and addresses should be
