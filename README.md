@@ -148,7 +148,7 @@ required by the practical task.
 
 **Screenshot -- Zenmap Topology**
 
-> ![Zenmap Topology Screenshot](screenshots/zenmap-topology.png)
+> ![Zenmap Topology Screenshot](zenmap_topology.png)
 
 **Note:** The actual subnet, number of hosts and addresses should be
 replaced with the results from my own network when submitting the
@@ -260,60 +260,22 @@ practical activities below.
 
 ### Evidence 1
 
-```{=html}
-<!-- Add screenshot here -->
-```
-![Evidence 1](screenshots/evidence-1.png)
+![Evidence 1](zenmap_6.png)
 
 ### Evidence 2
 
-```{=html}
-<!-- Add screenshot here -->
-```
-![Evidence 2](screenshots/evidence-2.png)
+![Evidence 2](zenmap_8.png)
 
 ### Evidence 3
 
-```{=html}
-<!-- Add screenshot here -->
-```
-![Evidence 3](screenshots/evidence-3.png)
-
-### Evidence 4
-
-```{=html}
-<!-- Add screenshot here -->
-```
-![Evidence 4](screenshots/evidence-4.png)
-
-### Evidence 5
-
-```{=html}
-<!-- Add screenshot here -->
-```
-![Evidence 5](screenshots/evidence-5.png)
-
-### Evidence 6
-
-```{=html}
-<!-- Add screenshot here -->
-```
-![Evidence 6](screenshots/evidence-6.png)
-
-### Evidence 7
-
-```{=html}
-<!-- Add screenshot here -->
-```
-![Evidence 7](screenshots/evidence-7.png)
-
+![Evidence 3](zenmap_9.png)
 ------------------------------------------------------------------------
 
 ## 👤 Author
 
 **Ansari Rushan Aslam**\
 Cybersecurity Professional B084\
-LinkedIn: Rushan Ansari \| LinkedIn
+LinkedIn: https://www.linkedin.com/in/rushan-ansari-19a5aa372/
 
 ## 📌 Project Information
 
